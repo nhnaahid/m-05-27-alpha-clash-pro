@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -14,16 +14,89 @@
 
 </head>
 
-<body>
-    <section class="home">
-
-    </section>
-    <section class="play">
-
-    </section>
-    <section class="sccore">
-        
-    </section>
+<body class="font-poppins">
+    <main class="bg-[#1E1E1E]">
+        <!--Screen Container -->
+        <section class="min-h-screen w-1/2 bg-[url(images/background.png)] bg-no-repeat bg-cover mx-auto border">
+            <!-- Home Screen -->
+            <section id="home">
+                <div class="text-white space-y-5 flex flex-col justify-center items-center min-h-screen">
+                    <h1 class="font-anton text-7xl">ALPHABET CLASH</h1>
+                    <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                    <button onclick="play()" class="btn">Play Now</button>
+                </div>
+            </section>
+            <!-- Play Ground Screen-->
+            <section id="play-ground" class="px-10 space-y-10 hidden">
+                <!-- Screen -->
+                <div
+                    class="artboard artboard-horizontal phone-1 border-8 rounded-lg border-[#010313CC] bg-[#FFFFFFB3] mt-5 mx-auto flex justify-center items-center">
+                    <div class=" w-1/3 ">
+                        <p id="current-alphabet" class="text-8xl font-semibold text-center uppercase">Y</p>
+                    </div>
+                </div>
+                <!-- Keyboard -->
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- life+Score -->
+                <div class="flex justify-between">
+                    <button class="btn bg-purple-700 text-white border-none px-3 font-semibold">
+                        Life
+                        <img src="images/heart.svg" alt="">
+                        <span>1</span>
+                    </button>
+                    <button class="btn bg-purple-400 text-white border-none px-3 font-semibold">
+                        Score
+                        <img src="images/dollar.svg" alt="">
+                        <span>1</span>
+                    </button>
+                </div>
+            </section>
+            <!-- Score Screen -->
+            <section class="sccore min-h-screen w-1/2 flex flex-col justify-center items-center gap-3 mx-auto hidden">
+                <div class="text-center space-y-5 bg-[purple] rounded-lg p-7">
+                    <h1 class="text-white text-6xl font-semibold">Score : <span>14</span></h1>
+                    <button class="btn bg-white text-black border-none px-3 font-semibold">Play Again</button>
+                    <p class="text-white"> Practice will make you Pro</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
